@@ -23,21 +23,63 @@
 }
 
 
--(void) rollWithPinCount:(int) pins
+-(void) rollWithPinCount:(NSInteger) pins
 {
-    rolls[lastRoll]=pins;
-    lastRoll++;
+    if (lastRoll == 21) {
+        return;
+    }
+    
+    rolls[lastRoll++]=pins;
+    if ([self isStrike:pins] && lastRoll <19) {
+        lastRoll++;
+    }
 }
 
 -(NSInteger) score
 {
-    
     NSInteger currentScore=0;
-    for (int i=0; i<=lastRoll; i++) {
-        currentScore+=rolls[i];
+    NSInteger rollPoints=0;
+    
+    for (int turn=0; turn<lastRoll; turn+=2) {
+        
+   
+        rollPoints=rolls[turn]+rolls[turn+1];
+        
+        if ([self isStrike:rolls[turn]]) { // strike
+            
+            if([self isLastRoll:turn]){
+                rollPoints+=rolls[turn+1];
+                turn--;
+              
+            }else
+                 rollPoints+=rolls[turn+2]+rolls[turn+3];
+        }
+        else if ([self areRollPointSpare:rollPoints]){ // spare
+            if ([self isLastRoll:turn]) {
+                rollPoints+=rolls[turn+1];
+                turn--;
+            }else
+                rollPoints+=rolls[turn+2];
+                
+        }
+        currentScore+=rollPoints;
     }
     return currentScore;
 }
 
+-(BOOL) isStrike:(NSInteger)pinValue{
+
+    return pinValue==10?YES:NO;
+}
+
+-(BOOL) areRollPointSpare:(NSInteger)pins
+{
+    return [self isStrike:pins];
+}
+
+-(BOOL) isLastRoll:(int) currentRoll{
+
+    return currentRoll >= 18;
+}
 
 @end

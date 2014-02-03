@@ -11,12 +11,13 @@
 @interface Game : NSObject{
 
     NSInteger count;
-    NSInteger rolls [21];
+    NSInteger rolls [22];
     NSInteger lastRoll;
 }
 
 @property (nonatomic,readwrite) NSInteger count;
 
--(void) rollWithPinCount:(int) pins;
+-(void) rollWithPinCount:(NSInteger) pins;
 -(NSInteger) score;
+-(BOOL) isStrike:(NSInteger)pinValue;
 @end

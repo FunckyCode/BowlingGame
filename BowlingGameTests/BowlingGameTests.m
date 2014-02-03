@@ -66,4 +66,51 @@
     XCTAssertEqual([gameModel score], 16, "Fail Testing all ones");
     
 }
+
+-(void)testOneStrike {
+    
+    [gameModel rollWithPinCount:10]; // strike
+    [gameModel rollWithPinCount:3];
+    [gameModel rollWithPinCount:4];
+    [self rollPins:0 times:16];
+    XCTAssertEqual([gameModel score], 24, "One Strike should be 24");
+}
+
+-(void) testStrike{
+    [gameModel rollWithPinCount:10];
+    [gameModel rollWithPinCount:5];
+    [gameModel rollWithPinCount:1];
+    
+    XCTAssertEqual([gameModel score],22,"Should not return a value until next roll");
+}
+
+-(void) testLastRollWithStroke{
+    [self rollPins:1 times:18];
+    [gameModel rollWithPinCount:10];
+    [gameModel rollWithPinCount:2];
+    [gameModel rollWithPinCount:2];
+    
+    XCTAssertEqual([gameModel score],36,"Should not return a value until next roll");
+}
+
+-(void) testPerfectGame{
+    
+     [self rollPins:10 times:21];
+    
+    XCTAssertEqual([gameModel score],300,"Should not return a value until next roll");
+}
+
+-(void) testLastRollWithNonSpecial{
+    [self rollPins:1 times:18];
+    [gameModel rollWithPinCount:2];
+    [gameModel rollWithPinCount:2];
+
+
+    XCTAssertEqual([gameModel score],22,"Should not return a value until next roll");
+}
+
+-(void) testIsStrikeMethod{
+    XCTAssertTrue([gameModel isStrike:10], "Should be true");
+    ;
+}
 @end

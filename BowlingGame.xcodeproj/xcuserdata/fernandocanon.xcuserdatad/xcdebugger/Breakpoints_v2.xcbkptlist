@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BowlingGame/Game.m"
-            timestampString = "413062823.57644"
+            timestampString = "413078188.397941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-score"
             landmarkType = "5">
          </BreakpointContent>
