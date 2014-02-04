@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0CA5E3D9189EC54600AE6941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5E3D8189EC54600AE6941 /* Foundation.framework */; };
-		0CA5E3DE189EC54600AE6941 /* BowlingGame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CA5E3DD189EC54600AE6941 /* BowlingGame.h */; };
-		0CA5E3E0189EC54600AE6941 /* BowlingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5E3DF189EC54600AE6941 /* BowlingGame.m */; };
 		0CA5E3E7189EC54600AE6941 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5E3E6189EC54600AE6941 /* XCTest.framework */; };
 		0CA5E3E8189EC54600AE6941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5E3D8189EC54600AE6941 /* Foundation.framework */; };
 		0CA5E3EA189EC54600AE6941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5E3E9189EC54600AE6941 /* UIKit.framework */; };
@@ -37,7 +35,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0CA5E3DE189EC54600AE6941 /* BowlingGame.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +44,6 @@
 		0CA5E3D5189EC54600AE6941 /* libBowlingGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBowlingGame.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA5E3D8189EC54600AE6941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CA5E3DC189EC54600AE6941 /* BowlingGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BowlingGame-Prefix.pch"; sourceTree = "<group>"; };
-		0CA5E3DD189EC54600AE6941 /* BowlingGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BowlingGame.h; sourceTree = "<group>"; };
-		0CA5E3DF189EC54600AE6941 /* BowlingGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BowlingGame.m; sourceTree = "<group>"; };
 		0CA5E3E5189EC54600AE6941 /* BowlingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowlingGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA5E3E6189EC54600AE6941 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0CA5E3E9189EC54600AE6941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -116,8 +111,6 @@
 			children = (
 				0CA5E3FE189EC58F00AE6941 /* Game.h */,
 				0CA5E3FF189EC58F00AE6941 /* Game.m */,
-				0CA5E3DD189EC54600AE6941 /* BowlingGame.h */,
-				0CA5E3DF189EC54600AE6941 /* BowlingGame.m */,
 				0CA5E3DB189EC54600AE6941 /* Supporting Files */,
 			);
 			path = BowlingGame;
@@ -230,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA5E3E0189EC54600AE6941 /* BowlingGame.m in Sources */,
 				0CA5E400189EC58F00AE6941 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +409,7 @@
 				0CA5E3FA189EC54600AE6941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CA5E3FB189EC54600AE6941 /* Build configuration list for PBXNativeTarget "BowlingGameTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +418,7 @@
 				0CA5E3FD189EC54600AE6941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
